@@ -21,7 +21,7 @@ app.get("/api/health", async (_req: Request, res: Response) => {
 
 app.use("/api/tasks", taskRoutes);
 
-app.use((_req, res) => {
+app.use((_req: Request, res: Response) => {
   res.status(404).json({
     message: "Route not found",
   });
